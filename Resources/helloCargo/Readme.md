@@ -94,3 +94,17 @@ Hello, world!
 ```sh
 cargo check # Verify that it compiles without building
 ```
+
+#### Update
+
+```sh
+cargo update # It is used to update any dependency version.
+```
+
+#### Documentation
+
+```sh
+cargo doc --open # It is used to open the doc of provided dependency.
+```
+
+
