@@ -41,14 +41,12 @@ This command will generate several files:
 main.rs (your source file)
 main.exe (the executable file)
 A debugging information file (with a .pdb extension, on Windows)
-Run the Executable
+
 
 After compilation, run the generated executable:
-
-bash
-Copy code
-.\main.exe
+   ```bash
+   .\main.exe
+   ```
 You should see the output:
-
-Copy code
+```bash
 Hello, World!
