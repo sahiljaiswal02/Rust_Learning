@@ -23,6 +23,19 @@ Rust offers a range of features that make it an exceptional choice for various p
 
 To install Rust, use [rustup](https://rust-lang.github.io/rustup/), which will set up Rust and Cargo (the package manager) on your system.
 
+# Rust Toolchain Management with rustup
+
+This document provides instructions for managing your Rust toolchain using `rustup`. `rustup` is a toolchain installer for Rust that helps you manage different versions of Rust and associated tools.
+
+## Toolchain Management Commands
+
+### Update
+
+To update your Rust toolchain to the latest version, use:
+
+```bash
+rustup update
+
 ## Creating a New Project with Cargo
 
 Cargo is Rust's package manager and build tool, similar to npm (JavaScript) or pub (Dart). It comes bundled with Rust and is used to manage dependencies, build projects, and more.
