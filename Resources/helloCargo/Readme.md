@@ -7,9 +7,8 @@ Cargo is a package manager that is equivalent to npm or pub, and comes built in 
 1. Create a new project:
 
 ```sh
-cargo new project_name # Scaffold a new project
-cd project_name # Open the project folder
-code . # Open VS Code (or text editor of choice)
+cargo new project_name 
+cd project_name
 ```
 
 ### Project anatomy
@@ -26,7 +25,7 @@ project_name
 
 #### Cargo.toml
 
-> Equivalent to pubspec.yaml in Dart/Flutter or package.json in JS/TS
+> Cargo’s configuration format.
 
 ```toml
 [package]
@@ -40,7 +39,7 @@ edition = "2018"
 
 #### main.rs
 
-> Equivalent to index.js, main.dart, etc.
+> main file where you right the code.
 
 ```rust
 // Main application
