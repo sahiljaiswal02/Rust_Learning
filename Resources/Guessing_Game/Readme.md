@@ -33,7 +33,7 @@
       println!("You guessed: {}", guess);
   }
   ```
-#### 2.Generating a Secret Number
+#### 2. Generating a Secret Number
 > Before we can write code that uses rand, we need to modify the Cargo.toml file to include the rand crate as a dependency. 
   ```bash
   [dependencies]
@@ -45,69 +45,27 @@
      Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
       Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
   ```
-#### 3.Generating a Random Number
+#### 3. Generating a Random Number
   ```bash
-  use std::io;
-  use rand::Rng;
-  
-  fn main() {
-      println!("Guess the number!");
-  
       let secret_number = rand::thread_rng().gen_range(1..=100);
-  
-      println!("The secret number is: {secret_number}");
-  
-      println!("Please input your guess.");
-  
-      let mut guess = String::new();
-  
-      io::stdin()
-          .read_line(&mut guess)
-          .expect("Failed to read line");
-  
-      println!("You guessed: {guess}");
-  }
   ```
-#### 4.Comparing the Guess to the Secret Number
+#### 4. Comparing the Guess to the Secret Number
   ```bash
-  use rand::Rng;
-  use std::cmp::Ordering;
-  use std::io;
-  
-  fn main() {
-      // --snip--
-  
-      println!("You guessed: {guess}");
-  
       match guess.cmp(&secret_number) {
           Ordering::Less => println!("Too small!"),
           Ordering::Greater => println!("Too big!"),
           Ordering::Equal => println!("You win!"),
       }
-  }
   ```
 
-#### 5.Allowing Multiple Guesses with Looping
+#### 5. Allowing Multiple Guesses with Looping
   ```bash
-      // --snip--
-  
-      println!("The secret number is: {secret_number}");
-  
       loop {
-          println!("Please input your guess.");
-  
           // --snip--
-  
-          match guess.cmp(&secret_number) {
-              Ordering::Less => println!("Too small!"),
-              Ordering::Greater => println!("Too big!"),
-              Ordering::Equal => println!("You win!"),
-          }
       }
-  }
   ```
 
-#### 6.Quitting After a Correct Guess
+#### 6. Quitting After a Correct Guess
   ```bash
           // --snip--
   
@@ -119,26 +77,14 @@
                   break;
               }
           }
-      }
-  }
   ```
 
-#### 7.Handling Invalid Input
+#### 7. Handling Invalid Input
   ```bash
-          // --snip--
-  
-          io::stdin()
-              .read_line(&mut guess)
-              .expect("Failed to read line");
-  
           let guess: u32 = match guess.trim().parse() {
               Ok(num) => num,
               Err(_) => continue,
           };
-  
-          println!("You guessed: {guess}");
-  
-          // --snip--
   ```
 
 ### At this point, you’ve successfully built the guessing game. Congratulations!
