@@ -38,9 +38,9 @@ Once you've written your Rust program, you'll need to compile and run it. Follow
 
 This command will generate several files:
 
-main.rs (your source file)
-main.exe (the executable file)
-A debugging information file (with a .pdb extension, on Windows)
+- **main.rs (your source file)
+- **main.exe (the executable file)
+- **A debugging information file (with a .pdb extension, on Windows)
 
 
 After compilation, run the generated executable:
