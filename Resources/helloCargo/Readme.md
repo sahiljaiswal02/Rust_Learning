@@ -1,4 +1,4 @@
-#### What is Cargo?
+##What is Cargo?
 
 Cargo is a package manager that is equivalent to npm or pub, and comes built in with Rust.
 
@@ -39,7 +39,7 @@ edition = "2018"
 
 #### main.rs
 
-> main file where you right the code.
+> Main file where you right the code.
 
 ```rust
 // Main application
