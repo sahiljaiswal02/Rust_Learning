@@ -88,7 +88,7 @@
   ```
 
 ### At this point, you’ve successfully built the guessing game. Congratulations!
-> Final Program 
+> Final Program with detailed comments
   ```bash
   use rand::Rng; //Library to generate random number
   use std::cmp::Ordering;
