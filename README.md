@@ -33,3 +33,18 @@ To update your Rust toolchain to the latest version, run:
 
 ```bash
 rustup update
+```
+### Uninstall
+
+To uninstall your Rust toolchain, run:
+
+```bash
+rustup self uninstall
+```
+### Troubleshooting
+
+To check your Rust toolchain version, run:
+
+```bash
+rustc --version
+```
