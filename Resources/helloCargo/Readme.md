@@ -56,21 +56,24 @@ fn main() {
 project_name
 ...
 ├── Cargo.lock
+
 └── target
     ├── debug
     └── release
 ```
+#### Cargo.lock
+> This file keeps track of the exact versions of dependencies in your project.
 
 #### Debug build
 
 ```sh
-cargo build
+cargo build # Compile the project
 ```
 
 #### Release build
 
 ```sh
-cargo build --release
+cargo build --release # When project is finally ready for release, use  to compile it with optimizations
 ```
 
 #### Run it
