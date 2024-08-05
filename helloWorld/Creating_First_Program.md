@@ -18,4 +18,37 @@ To start with Rust, you'll need to create a new Rust file and write a simple pro
    fn main() {
        println!("Hello, World!");
    }
-  ```
+   
+# Compiling and Running Your Rust Program
+
+Once you've written your Rust program, you'll need to compile and run it. Follow these steps to do so:
+
+## Compiling the Program
+
+1. **Open Your Terminal or Command Prompt**
+
+   Navigate to the directory containing your `main.rs` file.
+
+2. **Compile the Program**
+
+   Use the Rust compiler command to compile your Rust code:
+
+   ```bash
+   rustc main.rs
+
+This command will generate several files:
+
+main.rs (your source file)
+main.exe (the executable file)
+A debugging information file (with a .pdb extension, on Windows)
+Run the Executable
+
+After compilation, run the generated executable:
+
+bash
+Copy code
+.\main.exe
+You should see the output:
+
+Copy code
+Hello, World!
