@@ -3,8 +3,7 @@
 Cargo is a package manager that is equivalent to npm or pub, and comes built in with Rust.
 
 ### Get started
-
-1. Create a new project:
+Create a new project:
 
 ```sh
 cargo new project_name 
