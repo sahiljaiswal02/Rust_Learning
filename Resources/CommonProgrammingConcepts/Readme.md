@@ -1,4 +1,4 @@
-# Common Prgogramming Concepts 
+# Common Programming Concepts 
 - Variables:
   ```bash let x = 5; ```
   - Defines a variable x with a value of 5.
