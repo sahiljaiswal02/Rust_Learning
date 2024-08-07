@@ -16,6 +16,11 @@
       width * height
   }
   ```
+Output: 
+```bash
+The area of the rectangle is 1500 square pixels.
+```
+
 ### Using Tuple
 > We would have to keep in mind that width is the tuple index 0 and height is the tuple index 1. This would be even harder for someone else to figure out and keep in mind if they were to use our code
   ```rust
@@ -31,6 +36,10 @@
       dimensions.0 * dimensions.1
   }
   ```
+Output: 
+```bash
+The area of the rectangle is 1500 square pixels.
+```
 
 ### Using Struct
 > This gives the proper clarity that width and height are related to each other, and it gives descriptive names to the values rather than using the tuple index values of 0 and 1.
@@ -54,6 +63,10 @@
       rectangle.width * rectangle.height
   }
   ```
+Output: 
+```bash
+The area of the rectangle is 1500 square pixels.
+```
 
 ### Adding Useful Functionality with Derived Traits
 >  It shows the values of all the fields for this instance, which would definitely help during debugging.
