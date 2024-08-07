@@ -33,7 +33,7 @@ Once you've written your Rust program, you'll need to compile and run it. Follow
 
    Use the Rust compiler command to compile your Rust code:
 
-   ```rust
+   ```bash
    rustc main.rs
 
 This command will generate several files:
@@ -44,7 +44,7 @@ This command will generate several files:
 
 
 After compilation, run the generated executable:
-   ```rust
+   ```bash
    .\main.exe
    ```
 You should see the output:
