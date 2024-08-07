@@ -5,7 +5,7 @@
 
 ## Initialization
 > Structs are inintialized by the keyword struct.
-```bash
+```rust
   struct User {
       active: bool,
       username: String,
@@ -14,7 +14,7 @@
   }
   ```
 > To use a struct after we’ve defined it, we create an instance of that struct by specifying concrete values for each of the fields.
-  ```bash
+  ```rust
   fn main() {
       let user1 = User {
           active: true,
@@ -25,7 +25,7 @@
   }
   ```
 > To make the instance mutable
-  ```bash
+  ```rust
   let mut user1 = User {
           active: true,
           username: String::from("someusername123"),
@@ -38,7 +38,7 @@
 > build_user function will return the instance User.
 
 > Username and email take the values from the parameters passed.
-  ```bash
+  ```rust
   fn build_user(email: String, username: String) -> User {
       User {
           active: true,
@@ -49,12 +49,12 @@
   }
   ```
 > Another way
-  ```bash
+  ```rust
   fn build_user(email: String, username: String) -> User {
       User {
           active: true,
-          username,
-          email, # email field and the email parameter have the same name, we only need to write email rather than email: email.
+          username, // username field and the username parameter have the same name, we only need to write username rather than username: username.
+          email, // email field and the email parameter have the same name, we only need to write email rather than email: email.
           sign_in_count: 1,
       }
   }
@@ -66,7 +66,7 @@
 > It’s often useful to create a new instance of a struct that includes most of the values from another instance.
 
 > Strings are not copied they are directly moved to other instance.
-  ```bash
+  ```rust
   struct User {
       active: bool,
       username: String,
@@ -83,20 +83,20 @@
       };
   
       let user2 = User {
-          active: user1.active, # Using user1's active field
-          username: user1.username, # Using user1's username field
+          active: user1.active, // Using user1's active field
+          username: user1.username, // Using user1's username field
           email: String::from("another@example.com"),
-          sign_in_count: user1.sign_in_count, # Using user1's sign_in_count field
+          sign_in_count: user1.sign_in_count, // Using user1's sign_in_count field
       };
   }
   ```
 > Another way for creating Instance with other Instance
-  ```bash
+  ```rust
   fn main() {
       # --snip--
       let user2 = User {
           email: String::from("another@example.com"),
-          ..user1 # The syntax .. specifies that the remaining fields not explicitly set should have the same value as the fields in the given instance.
+          ..user1   // The syntax .. specifies that the remaining fields not explicitly set should have the same value as the fields in the given instance.
       };
   }
   ```
@@ -104,7 +104,7 @@
 > Rust also supports structs that look similar to tuples, called tuple structs.
 
 > Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples.
- ```bash
+ ```rust
   struct Color(i32, i32, i32);
   struct Point(i32, i32, i32);
   
