@@ -1,13 +1,13 @@
 # Conditionals
 > The ability to run some code depending on whether a condition is true and to run some code repeatedly while a condition is true.
 ### if Expressions
-  ```bash
+  ```rust
   if number != 0 {
           println!("number was something other than zero");
       }
   ```
 ### if-else-if
-  ```bash
+  ```rust
       let number = 6;
   
       if number % 4 == 0 {
@@ -21,9 +21,9 @@
       }
   ```
 ### Single line condition
-  ```bash
+  ```rust
       let condition = true;
-      let number = if condition { 5 } else { 6 };
+      let number = if condition { 5 } else { 6 };  //If the condition will be true it will execute 5 else 6.
   
       println!("The value of number is: {number}");
   ```
