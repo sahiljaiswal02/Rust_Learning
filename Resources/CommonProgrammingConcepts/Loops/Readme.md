@@ -2,7 +2,7 @@
 > It’s useful to execute a block of code more than once.
 ## Conditional Loops with For
 #### Infinite Loop
-  ```bash
+  ```rust
   fn main() {
       loop {
           println!("again!");
@@ -11,7 +11,7 @@
   ```
 
 #### Returning values from Loop
-  ```bash
+  ```rust
   fn main() {
     let mut counter = 0;
 
@@ -29,15 +29,15 @@
 - break expression you use to stop the loop
 
 #### Loop Labels to Disambiguate Between Multiple Loops
-   ```bash
+   ```rust
    'counting_up: loop {
          println!("count = {count}");
    }
    ```
 #### For Loop with range
-  ```bash
+  ```rust
   fn main() {
-      for number in (1..4).rev() { # rev is used to reverse the string
+      for number in (1..4).rev() { // rev is used to reverse the string
           println!("{number}!");
       }
       println!("LIFTOFF!!!");
@@ -45,7 +45,7 @@
   ```
 
 ## Conditional Loops with while
-  ```bash
+  ```rust
   fn main() {
       let mut number = 3;
   
@@ -59,7 +59,7 @@
   }
   ```
 ## Loops to Print Array
-  ```bash
+  ```rust
   fn main() {
       let a = [10, 20, 30, 40, 50];
       let mut index = 0;
@@ -72,7 +72,7 @@
   }
   ```
 ### Efficient Way because might be that the index provided in while loop is not present 👇
-```bash
+```rust
 fn main() {
     let a = [10, 20, 30, 40, 50];
 
