@@ -5,7 +5,7 @@
   $ cd guessing_game
   ```
 #### Look at the generated Cargo.toml file:
-  ```bash
+  ```toml
   [package]
   name = "guessing_game"
   version = "0.1.0"
@@ -16,7 +16,7 @@
   [dependencies]
   ```
 #### 1. The first part of the guessing game program will ask for user input, process that input, and check that the input is in the expected form. 
-  ```bash
+  ```rust
   use std::io;
   
   fn main() {
@@ -35,7 +35,7 @@
   ```
 #### 2. Generating a Secret Number
 > Before we can write code that uses rand, we need to modify the Cargo.toml file to include the rand crate as a dependency. 
-  ```bash
+  ```toml
   [dependencies]
   rand = "0.8.5"
   ```
@@ -46,11 +46,11 @@
       Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
   ```
 #### 3. Generating a Random Number
-  ```bash
+  ```rust
       let secret_number = rand::thread_rng().gen_range(1..=100);
   ```
 #### 4. Comparing the Guess to the Secret Number
-  ```bash
+  ```rust
       match guess.cmp(&secret_number) {
           Ordering::Less => println!("Too small!"),
           Ordering::Greater => println!("Too big!"),
@@ -59,14 +59,14 @@
   ```
 
 #### 5. Allowing Multiple Guesses with Looping
-  ```bash
+  ```rust
       loop {
           // --snip--
       }
   ```
 
 #### 6. Quitting After a Correct Guess
-  ```bash
+  ```rust
           // --snip--
   
           match guess.cmp(&secret_number) {
@@ -80,7 +80,7 @@
   ```
 
 #### 7. Handling Invalid Input
-  ```bash
+  ```rust
           let guess: u32 = match guess.trim().parse() {
               Ok(num) => num,
               Err(_) => continue,
@@ -89,7 +89,7 @@
 
 ### At this point, you’ve successfully built the guessing game. Congratulations!
 > Final Program with detailed comments
-  ```bash
+  ```rust
   use rand::Rng; //Library to generate random number
   use std::cmp::Ordering;
   use std::io; //library to take input //library to compare two values
