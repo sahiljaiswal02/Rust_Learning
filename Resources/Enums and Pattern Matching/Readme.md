@@ -1,109 +1,13 @@
-# The match Control Flow Construct
-> Rust has an extremely powerful control flow construct called match that allows you to compare a value against a series of patterns and then execute code based on which pattern matches.
-#### Example: 
-> Coin-sorting machine: coins slide down a track with variously sized holes along it, and each coin falls through the first hole it encounters that it fits into.
-```rust
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter,
-}
+# Enums and Pattern Matching
+> Enums are a type that can have a fixed set of possible values, each known as a variant.
 
-fn value_in_cents(coin: Coin) -> u8 {
-    match coin {
-        Coin::Penny => 1,
-        Coin::Nickel => 5,
-        Coin::Dime => 10,
-        Coin::Quarter => 25,
-    }
-}
-```
-- With `if`, the condition needs to evaluate to a Boolean value, but with enum it can be any type.
+> Enums are used to represent a value that can be one of several predefined options, which can make your code more readable and safer.
 
-> For multiple line code we use the curly brackets {} in a match arm code
-```rust
-Coin::Penny => {
-            println!("Lucky penny!");
-            1
-        }
-```
-### Patterns That Bind to Values
-> Match arms is that they can bind to the parts of the values that match the pattern
-```rust
-#[derive(Debug)] // so we can inspect the state in a minute
-enum UsState {
-    Alabama,
-    Alaska,
-    // --snip--
-}
+## What is `Option`?
+> `Option` is a special enum that represents a value that can be either `Some(value)` or `None`, effectively encoding the concept of an optional value.
 
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter(UsState),
-}
-```
-### Matching with Option<T>
-```rust
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        None => None,  // If nothing is passed in, return None
-        Some(i) => Some(i + 1), //If something is passed in, return Some(i + 1)
-    }
-}
-
-let five = Some(5);
-let six = plus_one(five);
-let none = plus_one(None);
-```
-> Sometimes it also gets exhaustive because rust understand that every case is not covered for example in the following func none cse is not handled so it throws error 
-```rust
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {  //None case not covered
-        Some(i) => Some(i + 1),
-    }
-}
-```
-### Catch-all Patterns and the _ Placeholder
-> Game: If num comes other than 3 and 7 then it moves the number of space forward in the board
-```rust
-let dice_roll = 9;
-match dice_roll {
-    3 => add_fancy_hat(),
-    7 => remove_fancy_hat(),
-    other => move_player(other), //uses the variable by passing it to the move_player function
-} 
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
-fn move_player(num_spaces: u8) {}
-```
-> Game: If num comes other than 3 and 7 then re roll the dice in the board
--  _ is a special pattern that matches any value and does not bind to that value
--  This tells Rust we aren’t going to use the value, so Rust won’t warn us about an unused variable.
-```rust
-let dice_roll = 9;
-match dice_roll {
-    3 => add_fancy_hat(),
-    7 => remove_fancy_hat(),
-    _ => reroll(),  //we’re explicitly ignoring all other values in the last arm
-}
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
-fn reroll() {}
-```
-> Game: If num comes other than 3 and 7 then don not pass anything
-```rust
-let dice_roll = 9;
-match dice_roll {
-    3 => add_fancy_hat(),
-    7 => remove_fancy_hat(),
-    _ => (),  //we aren’t going to use any other value that doesn’t match a pattern
-}
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
-```
+## Pattern Matching with Enums
+> `match` expression to execute different code based on the enum variant.
+  
+## Using the `if let` Construct
+> `if let` is a concise syntax for handling enums when you’re interested in one specific variant.
