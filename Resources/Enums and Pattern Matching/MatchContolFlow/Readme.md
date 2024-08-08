@@ -19,7 +19,7 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 ```
-- With `if`, the condition needs to evaluate to a Boolean value, but with enum it can be any type.
+- With `if`, the condition needs to evaluate to a Boolean value, but with `enum` it can be any type.
 
 > For multiple line code we use the curly brackets {} in a match arm code
 ```rust
@@ -53,10 +53,6 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
         Some(i) => Some(i + 1), //If something is passed in, return Some(i + 1)
     }
 }
-
-let five = Some(5);
-let six = plus_one(five);
-let none = plus_one(None);
 ```
 > Sometimes it also gets exhaustive because rust understand that every case is not covered for example in the following func none cse is not handled so it throws error 
 ```rust
@@ -75,10 +71,6 @@ match dice_roll {
     7 => remove_fancy_hat(),
     other => move_player(other), //uses the variable by passing it to the move_player function
 } 
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
-fn move_player(num_spaces: u8) {}
 ```
 > Game: If num comes other than 3 and 7 then re roll the dice in the board
 -  _ is a special pattern that matches any value and does not bind to that value
@@ -90,10 +82,6 @@ match dice_roll {
     7 => remove_fancy_hat(),
     _ => reroll(),  //we’re explicitly ignoring all other values in the last arm
 }
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
-fn reroll() {}
 ```
 > Game: If num comes other than 3 and 7 then don not pass anything
 ```rust
@@ -103,7 +91,4 @@ match dice_roll {
     7 => remove_fancy_hat(),
     _ => (),  //we aren’t going to use any other value that doesn’t match a pattern
 }
-
-fn add_fancy_hat() {}
-fn remove_fancy_hat() {}
 ```
