@@ -2,7 +2,7 @@
 
 Welcome to the Learning Rust repository! Rust is a modern systems programming language that combines speed and memory efficiency with a rich set of features that ensure safety and performance.
 
-## Why Rust?
+## Why Rust ?
 
 Rust is designed to be:
 
