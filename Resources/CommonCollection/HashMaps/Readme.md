@@ -69,4 +69,7 @@ for word in text.split_whitespace() {  //The split_whitespace method returns an 
 }
 println!("{map:?}");  //{"world": 2, "wonderful": 1, "hello": 1}
 ```
+# Hashing Functions
+> HashMap uses a hashing function called SipHash that can provide resistance to denial-of-service (DoS) attacks involving hash tables.
 
+> A hasher is a type that implements the BuildHasher trait. 
