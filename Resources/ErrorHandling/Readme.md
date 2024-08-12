@@ -1,6 +1,6 @@
 # Error Handling in Rust
 
-Rust provides robust error handling mechanisms to ensure your programs are resilient and reliable. Here's a summary of the key concepts covered in this chapter:
+Rust provides robust error handling mechanisms to ensure your programs are resilient and reliable.
 
 1. **Categories of Errors**:
    - **Recoverable Errors**: These are errors you can handle and recover from, such as file not found or invalid input.
