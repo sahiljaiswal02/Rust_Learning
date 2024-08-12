@@ -52,7 +52,7 @@ for i in &mut v {
 }
 ```
 
-## Using an Enum to Store Multiple Types
+## Using an `Enum` to Store Multiple Types
 ```rust
 enum SpreadsheetCell {
     Int(i32),
@@ -67,4 +67,4 @@ let row = vec![
 ];
 ```
 - When the vector gets dropped, all of its contents are also dropped, meaning the integers it holds will be cleaned up.
-- Vector si dropped using '//' before the vector.
+- Vector si dropped using `//` before the vector.
