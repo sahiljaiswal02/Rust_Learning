@@ -5,12 +5,12 @@ enum Result<T, E> {
     Err(E),
 }
 ```
-> T represents the type of the value that will be returned in a success case within the Ok variant
+> `T` represents the type of the value that will be returned in a success case within the Ok variant
 
-> E represents the type of the error that will be returned in a failure case within the Err variant
+> `E` represents the type of the error that will be returned in a failure case within the Err variant
 
 #### Example:
-> Using a match expression to handle the Result variants that might be returned.
+> Using a `match` expression to handle the Result variants that might be returned.
 ```rust
 use std::fs::File;  //file library
 
@@ -60,6 +60,7 @@ fn main() {
 ```
 ## Propagating Errors
 > When a function’s implementation calls something that might fail, instead of handling the error within the function itself you can return the error to the calling code so that it can decide what to do. This is known as propagating the error and gives more control to the calling code.
+
 ```rust
 use std::io::{self, Read};
 fn read_username_from_file() -> Result<String, io::Error> {
@@ -85,7 +86,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
 ```
 
 ## Where The `?` Operator Can Be Used
-> The ? operator can only be used in functions whose return type is compatible with the value the `?` is used.
+> The `?` operator can only be used in functions whose return type is compatible with the value the `?` is used.
 
 #### Example:
 ```rust
