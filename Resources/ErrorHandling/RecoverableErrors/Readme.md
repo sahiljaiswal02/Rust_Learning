@@ -105,16 +105,16 @@ fn main() -> Result<(), Box<dyn Error>> {  //Changing main to return Result<(), 
 }
 ```
 
-#### Example: The `last_char_of_first_line` function
+#### Example: The ` last_char_of_first_line ` function
+
 ```rust
 fn last_char_of_first_line(text: &str) -> Option<char> {
     text.lines().next()?.chars().last()
 }
 ```
 
-> This code takes the text string slice argument and calls the `lines` method on it, which returns an iterator over the lines in the string. 
-> Because this function wants to examine the first line, it calls `next` on the iterator to get the first value from the iterator.
-> If text is the empty string, this call to `next` will return None, in which case we use `?` to stop and return None from `last_char_of_first_line`.
-> If text is not the empty string, `next` will return a Some value containing a string slice of the first line in text.
-
-> We can call `chars` on that string slice to get an iterator of its characters. We’re interested in the last character in this first line, so we call `last` to return the last item in the iterator.
+- This code takes the text string slice argument and calls the `lines` method on it, which returns an iterator over the lines in the string. 
+- Because this function wants to examine the first line, it calls `next` on the iterator to get the first value from the iterator.
+- If text is the empty string, this call to `next` will return None, in which case we use `?` to stop and return None from `last_char_of_first_line`.
+- If text is not the empty string, `next` will return a Some value containing a string slice of the first line in text.
+- We can call `chars` on that string slice to get an iterator of its characters. We’re interested in the last character in this first line, so we call `last` to return the last item in the iterator.
