@@ -4,6 +4,7 @@
 > Rust, therefore, allows you to choose the alternative of immediately aborting, which ends the program without cleaning up the data.
 
 > Add `panic = 'abort'` to the appropriate [profile] sections in your `Cargo.toml` file.
+
 ```toml
 [profile.release]
 panic = 'abort'
