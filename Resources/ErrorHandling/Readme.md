@@ -1,4 +1,4 @@
-# Error Handling in Rust
+# Error Handling in Rust 
 
 Rust provides robust error handling mechanisms to ensure your programs are resilient and reliable.
 
