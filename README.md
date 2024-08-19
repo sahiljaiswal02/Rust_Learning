@@ -1,4 +1,5 @@
-# Learning Rust
+# Learning Rust  ![image](https://github.com/user-attachments/assets/59998b43-f00b-4aeb-a9e6-c05a7ff92db4)
+
 
 Welcome to the Learning Rust repository! Rust is a modern systems programming language that combines speed and memory efficiency with a rich set of features that ensure safety and performance.
 
